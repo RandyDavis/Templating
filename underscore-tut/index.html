@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>JavaScript Templating Using Underscore JS</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pagination.css">
 </head>
 <body>
   <div class="page">
@@ -13,17 +15,21 @@
     </div>
   </div>
 
+  <div class="pagination">
+    
+  </div>
+
   <script type="text/template" id="contact-template">
-  <% _.each(contacts, function(contact) { %>
+  <% _.each(listOfContacts, function(contact) { %>
     <div class="contact">
       <div class="upper">
-        <img src="img/RandyDavisHeadShotMKS.png">
-        <span class="address">123 Some St. El Paso, Tx</span>
-        <a href="mailto:randy@example.com" class="email">randy@example.com</a>
-        <span class="number">555-555-5555</span>
+        <img src="<%= contact.imageUrl %>">
+        <span class="address"><%= contact.address %></span>
+        <a href="mailto:<%= contact.email %>" class="email"><%= contact.email %></a>
+        <span class="number"><%= contact.number %></span>
       </div>
       <div class="lower">
-        <span class="name">Randy Davis</span>
+        <span class="name"><%= contact.name %></span>
       </div>
     </div>
   <% }); %>
@@ -32,6 +38,8 @@
 
   <script src="js/jquery2.1.1.js"></script>
   <script src="js/underscore.js"></script>
+  <script src="js/pagination.js"></script>
+  <script src="js/custom.js"></script>
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>

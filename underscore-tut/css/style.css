@@ -1,0 +1,63 @@
+body {
+  margin: 10px auto;
+}
+
+.page h1 {
+  margin: 10px auto;
+  color: red;
+  border: 2px solid grey;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 80%;
+}
+
+.contact {
+  clear: both;
+  display: block;
+  margin: 10px 6rem;
+  padding: 10px;
+  border: 1px solid red;
+  min-height: 350px;
+}
+
+.upper {
+  max-width: 80%;
+}
+  .upper img {
+    float: left;
+    width: 65%;
+    height: 254px;
+    border: 2px dashed blue;
+    margin-right: 10px;
+  }
+
+  .upper span.address {
+    font-family: Helvetica;
+    color: white;
+    background-color: rgba(8, 94, 4, 1.0000);
+  }
+
+  .upper a.email {
+    font-family: Helvetica;
+  }
+
+  .upper span.number {
+    font-family: Helvetica;
+  }
+
+.lower {
+
+}
+
+  .lower span.name {
+    font-family: Helvetica;
+    font-size: 250%;
+    width: 100%;
+    background-color: rgba(8, 94, 4, 0.2);
+  }
+
+  .pagination {
+    width: 350px;
+    margin: 0px auto;
+
+  }

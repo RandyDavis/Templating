@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Templating Using Underscore JS</title>
+</head>
+<body>
+  <div class="page">
+    <h1>Awesome Contacts List</h1>
+    <div class="contacts-list">
+      
+
+    </div>
+  </div>
+
+  <script type="text/template" id="contact-template">
+  <% _.each(contacts, function(contact) { %>
+    <div class="contact">
+      <div class="upper">
+        <img src="img/RandyDavisHeadShotMKS.png">
+        <span class="address">123 Some St. El Paso, Tx</span>
+        <a href="mailto:randy@example.com" class="email">randy@example.com</a>
+        <span class="number">555-555-5555</span>
+      </div>
+      <div class="lower">
+        <span class="name">Randy Davis</span>
+      </div>
+    </div>
+  <% }); %>
+  </script>
+
+
+  <script src="js/jquery2.1.1.js"></script>
+  <script src="js/underscore.js"></script>
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

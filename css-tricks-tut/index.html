@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Template Basics Practice</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js
+"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js
+"></script>
+  <script src="javascript/movie_data.js"></script>
+</head>
+<body>
+  
+  <script>
+    var compiled = _.template(
+      "<div class='movie'>" + 
+        "<h2><%= movie_title %></h2>" +
+        "<p><%= movie_desc %></p>" +
+      "</div>"
+    );
+
+
+    var output = compiled(data.movies[0]);
+
+    $("body").append(output);
+  
+  </script>
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
